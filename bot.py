@@ -25,7 +25,7 @@ async def on_message(message):
     elif message.content == (f'{prefix}오클아 안녕'):
         await message.channel.send("안녕 못함")
     elif message.content == (f'{prefix}오클아 나 귀엽지?'):
-        await message.channel.send("진짜 왜 그래?")
+        await message.channel.send("너 개같이 생겼어~^^")
     elif message.content == (f'{prefix}오클아 나 섹시하지?'):
         await message.channel.send("이자슥 딱대 넌 손절이다")
     elif message.content == (f'{prefix}오클아 오클 귀엽지?'):
