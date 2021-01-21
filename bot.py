@@ -50,23 +50,17 @@ async def on_message(message):
         await message.channel.send(embed=Hyunta)
     elif message.content == (f'{prefix}오클아 내정보'):
         date = datetime.datetime.utcfromtimestamp(((int(message.author.id) >> 22) + 1420070400000) / 1000)
-        tmi = discord.Embed(colour=discord.Colour.blue())
-        tmi.add_field(name="이름", value=message.author.name, inline=True)
-        tmi.add_field(name="서버이름", value=message.author.display_name, inline=True)
-        tmi.add_field(name="가입일", value=str(date.year) + "년 " + str(date.month) + "월 " + str(date.day) + "일 ", inline=True)
-        tmi.add_field(name="아이디", value=message.author.id, inline=True)
-        tmi.set_thumbnail(url=message.author.avarta_url)
-        await message.channel.send(embed=tmi)
+        my = discord.Embed(Colour=discord.Colour.blue(), title = message.author.name + " 의 정보다")
+        my.add_field(name="이름", value=message.author.name, inline=False)
+        my.add_field(name="서버이름", value=message.author.display_name, inline=False)
+        my.add_field(name="가입일", value=str(date.year) + "년" + str(date.month) + "월" + str(date.day) + "일", inline=False)
+        my.add_field(name="아이디", value=message.author.id, inline=False)
+        my.set_thumbnail(url=message.author.avatar_url)
+        await message.channel.send(embed=my)
     elif message.contnet == (f'{prefix}오클아 서버'):
         await message.channel.send("서버가 뭐지 먹는건가")
     elif message.content == (f'{prefix}오클아 현재시간'):
-        a = datetime.datetime.today().year
-        b = datetime.datetime.today().month
-        c = datetime.datetime.today().day
-        d = datetime.datetime.today().hour
-        e = datetime.datetime.today().minute
-        f = datetime.datetime.today().second
-        await message.channel.send(str(a) + "년 " + str(b) + "월 " + str(c) + "일 " + str(d) + "시 " + str(e) + "분 " + str(f) + "초 " + "다 이자슥아")
+        await message.channel.send("12934년 142월 5123일 53412시 5832분 7345초")
     elif message.content == (f'{prefix}오클아 초대링크'): 
         await message.channel.send("https://discord.com/oauth2/authorize?client_id=801316073508438016&scope=bot 이 링크로 초대")
     elif message.content == (f'{prefix}오클아 도배'):
