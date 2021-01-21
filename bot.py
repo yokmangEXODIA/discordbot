@@ -53,7 +53,7 @@ async def on_message(message):
         await message.channel.send("!warn")
     elif message.content == (f'{prefix}오클아 도움말'):
         embed = discord.Embed(colour=discord.Colour.green(), title="도움말", description="알아서 잘 쓰셈")
-        embed.add_field(name="명령어 리스트", value="```?오클아 도움말, ?오클아, ?오클아 안녕, ?오클아 나 귀엽지?, ?오클아 나 섹시하지?, ?오클아 오클 귀엽지?, ?오클아 사랑해줘, ?오클아 원주율, ?오클아 똥, ?오클아 불만있음?, ?오클아 인공지능, ?오클아 현타는?, ?오클아 초대링크, ?오클아 도배```", inline=False)
+        embed.add_field(name="명령어 리스트", value="```?오클아 도움말, ?오클아, ?오클아 안녕, ?오클아 나 귀엽지?, ?오클아 나 섹시하지?, ?오클아 오클 귀엽지?, ?오클아 사랑해줘, ?오클아 원주율, ?오클아 똥, ?오클아 불만있음?, ?오클아 인공지능, ?오클아 현타는?, ?오클아 누가 천재임?, ?오클아 초대링크, ?오클아 도배```", inline=False)
         embed.add_field(name="봇 초대링크", value="https://discord.com/oauth2/authorize?client_id=801291136093782046&scope=bot", inline=False)
         embed.add_field(name="개발자 디스코드", value="```Trol1#1230```", inline=False)
         embed.add_field(name="개발자 깃헙 오픈소스", value="https://github.com/KawaiTrol1/discordbot", inline=False)
