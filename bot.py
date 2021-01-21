@@ -44,10 +44,10 @@ async def on_message(message):
         await message.channel.send("일단 적어도 넌 아님")
     elif message.content == (f'{prefix}오클아 현타는?'):
         embed = discord.Hyunta(colour=discord.Colour.red(), title="현타", description="싸이코임 무서워")
-        embed.set_image(url=https://media.discordapp.net/attachments/801438907995521044/801481652827848764/image0.png)
-        embed.set_thumbnail(url=https://cdn.discordapp.com/attachments/801469560921260045/801634321194025011/image0.png)
+        embed.set_image(url="https://cdn.discordapp.com/attachments/801469560921260045/801481891521364058/image0.png")
+        embed.set_thumbnail(url="https://cdn.discordapp.com/attachments/801469560921260045/801634321194025011/image0.png")
         await message.channel.send(embed=Hyunta)
-    elif message.content == (f'{prefix}오클아 초대링크'):
+    elif message.content == (f'{prefix}오클아 초대링크'): 
         await message.channel.send("https://discord.com/oauth2/authorize?client_id=801291136093782046&scope=bot 이 링크로 초대")
     elif message.content == (f'{prefix}오클아 도배'):
         await message.channel.send("!warn")
