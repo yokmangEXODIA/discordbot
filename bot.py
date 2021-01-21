@@ -57,8 +57,6 @@ async def on_message(message):
         my.add_field(name="아이디", value=message.author.id, inline=False)
         my.set_thumbnail(url=message.author.avatar_url)
         await message.channel.send(embed=my)
-    elif message.contnet == (f'{prefix}오클아 서버'):
-        await message.channel.send("서버가 뭐지 먹는건가")
     elif message.content == (f'{prefix}오클아 현재시간'):
         await message.channel.send("12934년 142월 5123일 53412시 5832분 7345초")
     elif message.content == (f'{prefix}오클아 초대링크'): 
