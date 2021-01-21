@@ -1,6 +1,7 @@
 import discord
 from discord.ext import commands
 import os
+import datetime
 
 client = commands.Bot(command_prefix = '-')
 prefix = "?"
@@ -47,18 +48,40 @@ async def on_message(message):
         Hyunta.set_image(url="https://cdn.discordapp.com/attachments/801469560921260045/801481891521364058/image0.png")
         Hyunta.set_thumbnail(url="https://cdn.discordapp.com/attachments/801469560921260045/801634321194025011/image0.png")
         await message.channel.send(embed=Hyunta)
+    elif message.content == (f'{prefix}오클아 내정보'):
+        date = datetime.datetime.utcfromtimestamp(((int(message.author.id) >> 22) + 1420070400000) / 1000)
+        tmi = discord.Embed(colour=discord.Colour.blue())
+        tmi.add_field(name="이름", value=message.author.name, inline=True)
+        tmi.add_field(name="서버이름", value=message.author.display_name, inline=True)
+        tmi.add_field(name="가입일", value=str(date.year) + "년 " + str(date.month) + "월 " + str(date.day) + "일 ", inline=True)
+        tmi.add_field(name="아이디", value=message.author.id, inline=True)
+        tmi.set_thumbnail(url=message.author.avarta_url)
+        await message.channel.send(embed=tmi)
+    elif message.contnet == (f'{prefix}오클아 서버'):
+        list = []
+        for server in client.servers:
+            list.append(server.name)
+        await message.channel.send("\n".join(list))
+    elif message.content == (f'{prefix}오클아 현재시간'):
+        a = datetime.datetime.today().year
+        b = datetime.datetime.today().month
+        c = datetime.datetime.today().day
+        d = datetime.datetime.today().hour
+        e = datetime.datetime.today().minute
+        f = datetime.datetime.today().second
+        await message.channel.send(str(a) + "년 " + str(b) + "월 " + str(c) + "일 " + str(d) + "시 " + str(e) + "분 " + str(f) + "초 " + "다 이자슥아")
     elif message.content == (f'{prefix}오클아 초대링크'): 
-        await message.channel.send("https://discord.com/oauth2/authorize?client_id=801291136093782046&scope=bot 이 링크로 초대")
+        await message.channel.send("https://discord.com/oauth2/authorize?client_id=801316073508438016&scope=bot 이 링크로 초대")
     elif message.content == (f'{prefix}오클아 도배'):
         await message.channel.send("!warn")
     elif message.content == (f'{prefix}오클아 도움말'):
-        embed = discord.Embed(colour=discord.Colour.green(), title="도움말", description="알아서 잘 쓰셈")
-        embed.add_field(name="명령어 리스트", value="```?오클아 도움말, ?오클아, ?오클아 안녕, ?오클아 나 귀엽지?, ?오클아 나 섹시하지?, ?오클아 오클 귀엽지?, ?오클아 사랑해줘, ?오클아 원주율, ?오클아 똥, ?오클아 불만있음?, ?오클아 인공지능, ?오클아 현타는?, ?오클아 누가 천재임?, ?오클아 초대링크, ?오클아 도배```", inline=False)
-        embed.add_field(name="봇 초대링크", value="https://discord.com/oauth2/authorize?client_id=801291136093782046&scope=bot", inline=False)
-        embed.add_field(name="개발자 디스코드", value="```Trol1#1230```", inline=False)
-        embed.add_field(name="개발자 깃헙 오픈소스", value="https://github.com/KawaiTrol1/discordbot", inline=False)
-        embed.add_field(name="기획", value="오클", inline=False)
-        embed.add_field(name="마지막 업데이트", value="```2021.1.21 (Beta 0.2.0)```", inline=False)
+        embed = discord.Embed(colour=discord.Colour.green(), title="도움말", description=" ")
+        embed.set_thumbnail(url="https://cdn.discordapp.com/attachments/801469560921260045/801767533110755358/kasjdfklajskldfjklajsdf.png")
+        embed.add_field(name="명령어 리스트", value="```?오클아 도움말, ?오클아, ?오클아 안녕, ?오클아 나 귀엽지?, ?오클아 나 섹시하지?, ?오클아 오클 귀엽지?, ?오클아 사랑해줘, ?오클아 원주율, ?오클아 똥, ?오클아 불만있음?, ?오클아 인공지능, ?오클아 현타는?, ?오클아 누가 천재임?, ?오클아 내정보, ?오클아 서버, ?오클아 현재시간, ?오클아 초대링크, ?오클아 도배```", inline=True)
+        embed.add_field(name="봇 초대링크", value="https://discord.com/oauth2/authorize?client_id=801316073508438016&scope=bot", inline=True)
+        embed.add_field(name="개발자 디스코드", value="```Trol1#1230```", inline=True)
+        embed.add_field(name="개발자 깃헙 오픈소스", value="https://github.com/KawaiTrol1/discordbot", inline=True)
+        embed.add_field(name="마지막 업데이트", value="```2021.1.21 (Beta 0.3.1)```", inline=True)
         await message.channel.send(embed=embed)
 
 client.run(os.environ['token'])
