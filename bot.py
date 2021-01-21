@@ -58,10 +58,7 @@ async def on_message(message):
         tmi.set_thumbnail(url=message.author.avarta_url)
         await message.channel.send(embed=tmi)
     elif message.contnet == (f'{prefix}오클아 서버'):
-        list = []
-        for server in client.servers:
-            list.append(server.name)
-        await message.channel.send("\n".join(list))
+        await message.channel.send("서버가 뭐지 먹는건가")
     elif message.content == (f'{prefix}오클아 현재시간'):
         a = datetime.datetime.today().year
         b = datetime.datetime.today().month
@@ -77,7 +74,7 @@ async def on_message(message):
     elif message.content == (f'{prefix}오클아 도움말'):
         embed = discord.Embed(colour=discord.Colour.green(), title="도움말", description=" ")
         embed.set_thumbnail(url="https://cdn.discordapp.com/attachments/801469560921260045/801767533110755358/kasjdfklajskldfjklajsdf.png")
-        embed.add_field(name="명령어 리스트", value="```?오클아 도움말, ?오클아, ?오클아 안녕, ?오클아 나 귀엽지?, ?오클아 나 섹시하지?, ?오클아 오클 귀엽지?, ?오클아 사랑해줘, ?오클아 원주율, ?오클아 똥, ?오클아 불만있음?, ?오클아 인공지능, ?오클아 현타는?, ?오클아 누가 천재임?, ?오클아 내정보, ?오클아 서버, ?오클아 현재시간, ?오클아 초대링크, ?오클아 도배```", inline=True)
+        embed.add_field(name="명령어 리스트", value="https://docs.google.com/document/d/15_S6TZz1II7DSzn6CLD_SpdL8S9VxGcUKasasygkGFI/edit?usp=sharing", inline=True)
         embed.add_field(name="봇 초대링크", value="https://discord.com/oauth2/authorize?client_id=801316073508438016&scope=bot", inline=True)
         embed.add_field(name="개발자 디스코드", value="```Trol1#1230```", inline=True)
         embed.add_field(name="개발자 깃헙 오픈소스", value="https://github.com/KawaiTrol1/discordbot", inline=True)
