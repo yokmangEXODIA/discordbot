@@ -41,7 +41,11 @@ async def on_message(message):
     elif message.content == (f'{prefix}오클아 원주율'):
         await message.channel.send("? 수학 싫음 에엑따")
     elif message.content == (f'{prefix}오클아 갓브릿지'):
-        await message.channel.send{"1.마우스를 사 \n 2. 마우스를 밀어 \n 3. 블럭을 설치해 "}
+        godbridge = discord.Embed(colour=discord.Colour.dark_blue(), title="갓브릿지 하는법", description=" ")
+        godbridge.add_field(name="1. 마우스를 산다", value=" ", inline=True)
+        godbridge.add_field(name="2. 마우스를 민다", value=" ", inline=True)
+        godbridge.add_field(name="3. 갓브릿지를 한다", value=" ", inline=True)
+        await message.channel.send(embed=godbridge)
     elif message.content == (f'{prefix}오클아 똥'):
         await message.channel.send("응 니얼굴~")
     elif message.content == (f'{prefix}오클아 불만있음?'):
