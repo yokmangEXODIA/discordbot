@@ -72,7 +72,7 @@ async def on_message(message):
         await message.channel.send("12934년 142월 5123일 53412시 5832분 7345초")
     elif message.content == (f'{prefix}오클아 영어'):
         await message.channel.send("FXCK YOU BXXCH")
-     elif message.content == (f"{prefix}오클아 서버정보"):
+    elif message.content == (f'{prefix}오클아 서버정보'):
       gd = discord.Embed(colour=discord.Colour.purple(), title = "서버", description= "이 서버 정보임")
       gd.add_field(name="서버 이름", value=str(message.guild.name), inline=True)
       gd.add_field(name="서버장", value=str(message.guild.owner), inline=True)
