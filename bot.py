@@ -1,4 +1,9 @@
 import discord
+from discord import message
+from discord import embeds
+from discord import colour
+from discord import guild
+from discord.colour import Colour
 from discord.ext import commands
 import os
 import datetime
@@ -35,6 +40,8 @@ async def on_message(message):
         await message.channel.send("특별히 내가 사랑해줄께")
     elif message.content == (f'{prefix}오클아 원주율'):
         await message.channel.send("? 수학 싫음 에엑따")
+    elif message.content == (f'{prefix}오클아 갓브릿지'):
+        await message.channel.send{"1.마우스를 사 \n 2. 마우스를 밀어 \n 3. 블럭을 설치해 "}
     elif message.content == (f'{prefix}오클아 똥'):
         await message.channel.send("응 니얼굴~")
     elif message.content == (f'{prefix}오클아 불만있음?'):
@@ -51,14 +58,26 @@ async def on_message(message):
     elif message.content == (f'{prefix}오클아 내정보'):
         date = datetime.datetime.utcfromtimestamp(((int(message.author.id) >> 22) + 1420070400000) / 1000)
         my = discord.Embed(Colour=discord.Colour.blue(), title = message.author.name + " 의 정보다")
-        my.add_field(name="이름", value=message.author.name, inline=False)
-        my.add_field(name="서버이름", value=message.author.display_name, inline=False)
-        my.add_field(name="가입일", value=str(date.year) + "년" + str(date.month) + "월" + str(date.day) + "일", inline=False)
-        my.add_field(name="아이디", value=message.author.id, inline=False)
+        my.add_field(name="이름", value=message.author.name, inline=True)
+        my.add_field(name="서버이름", value=message.author.display_name, inline=True)
+        my.add_field(name="가입일", value=str(date.year) + "년" + str(date.month) + "월" + str(date.day) + "일", inline=True)
+        my.add_field(name="아이디", value=message.author.id, inline=True)
         my.set_thumbnail(url=message.author.avatar_url)
         await message.channel.send(embed=my)
     elif message.content == (f'{prefix}오클아 현재시간'):
         await message.channel.send("12934년 142월 5123일 53412시 5832분 7345초")
+    elif message.content == (f'{prefix}오클아 영어'):
+        await message.channel.send("FXCK YOU BXXCH")
+     elif message.content == (f"{prefix}오클아 서버정보"):
+      gd = discord.Embed(colour=discord.Colour.purple(), title = "서버", description= "이 서버 정보임")
+      gd.add_field(name="서버 이름", value=str(message.guild.name), inline=True)
+      gd.add_field(name="서버장", value=str(message.guild.owner), inline=True)
+      gd.add_field(name="서버 인증 단계", value=str(message.guild.verification_level), inline=True)
+      gd.add_field(name="부스트 수", value=str(message.guild.premium_subscription_count), inline=True)
+      gd.add_field(name="생성일", value=str(message.guild.created_at), inline=True)
+      gd.add_field(name="멤버수", value=str(message.guild.member_count), inline=True)
+      gd.set_thumbnail(url=message.guild.icon_url)
+      await message.channel.send(embed=gd)
     elif message.content == (f'{prefix}오클아 초대링크'): 
         await message.channel.send("https://discord.com/oauth2/authorize?client_id=801316073508438016&scope=bot 이 링크로 초대")
     elif message.content == (f'{prefix}오클아 도배'):
@@ -70,7 +89,8 @@ async def on_message(message):
         embed.add_field(name="봇 초대링크", value="https://discord.com/oauth2/authorize?client_id=801316073508438016&scope=bot", inline=True)
         embed.add_field(name="개발자 디스코드", value="```Trol1#1230```", inline=True)
         embed.add_field(name="개발자 깃헙 오픈소스", value="https://github.com/KawaiTrol1/discordbot", inline=True)
-        embed.add_field(name="마지막 업데이트", value="```2021.1.21 (Beta 0.3.1)```", inline=True)
+        embed.add_field(name="도움을 준 사람", value="scy", inline=True)
+        embed.add_field(name="마지막 업데이트", value="```2021.1.23 (Beta 0.4.0)```", inline=True)
         await message.channel.send(embed=embed)
 
 client.run(os.environ['token'])
