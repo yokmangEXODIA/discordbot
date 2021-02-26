@@ -86,17 +86,17 @@ async def on_message(message):
       gd.add_field(name="멤버수", value=str(message.guild.member_count), inline=True)
       gd.set_thumbnail(url=message.guild.icon_url)
       await message.channel.send(embed=gd)
-    elif message.content == (f'{prefix}오클아 마크서버주소'):
-        await message.channel.send("1.8.9 Onlyday.kro.kr 지금 바로 온리데이서버를 즐겨보세요!")
-    elif message.cintent == (f'{prefix}오클아 디코서버'):
-        await message.channel.send("https://discord.gg/nqqArAkGws")
+    elif message.content == (f'{prefix}오클아 마크서버'):
+        mcsv = disocrd.Embed(colour=discord.Colour.dark_magenta(), title= "서버주소", description= "디코도 있")
+        mcsv.add_field(name="서버주소 : Onlyday.kro.kr 버전 : 1.8.9", value="https://discord.gg/nqqArAkGws", inline=False)
+        await message.channel.send(embed=mcsv)
     elif message.content == (f'{prefix}오클아 초대링크'): 
         await message.channel.send("https://discord.com/oauth2/authorize?client_id=801316073508438016&scope=bot 이 링크로 초대")
     elif message.content == (f'{prefix}오클아 도배'):
         await message.channel.send("!warn")
     elif message.content == (f'{prefix}오클아 도움말'):
         embed = discord.Embed(colour=discord.Colour.green(), title="도움말", description=" ")
-        embed.set_thumbnail(url="https://cdn.discordapp.com/attachments/801469560921260045/801767533110755358/kasjdfklajskldfjklajsdf.png")
+        embed.set_thumbnail(url="https://cdn.discordapp.com/attachments/807555771062550529/814673417097576479/546129_Hv5fihnN.png")
         embed.add_field(name="명령어 리스트", value="https://docs.google.com/document/d/15_S6TZz1II7DSzn6CLD_SpdL8S9VxGcUKasasygkGFI/edit?usp=sharing", inline=True)
         embed.add_field(name="봇 초대링크", value="https://discord.com/oauth2/authorize?client_id=801316073508438016&scope=bot", inline=True)
         embed.add_field(name="개발자 디스코드", value="```Trol1#1230```", inline=True)
