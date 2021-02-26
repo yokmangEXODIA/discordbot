@@ -27,7 +27,7 @@ async def on_ready():
 @client.event 
 async def on_message(message):
     if message.content == (f'{prefix}오클아'):
-        await message.channel.send("ㅙ?")
+        await message.channel.send("ㅙ")
     elif message.content == (f'{prefix}오클아 안녕'):
         await message.channel.send("안녕 못함")
     elif message.content == (f'{prefix}오클아 나 귀엽지?'):
@@ -47,7 +47,7 @@ async def on_message(message):
         godbridge.add_field(name="3. 갓브릿지를 한다", value="참 쉽지?", inline=True)
         await message.channel.send(embed=godbridge)
     elif message.content == (f'{prefix}오클아 똥'):
-        await message.channel.send("응 니얼굴~")
+        await message.channel.send("누텔라")
     elif message.content == (f'{prefix}오클아 불만있음?'):
         await message.channel.send("물도있음")
     elif message.content == (f'{prefix}오클아 인공지능'):
@@ -72,6 +72,10 @@ async def on_message(message):
         await message.channel.send("12934년 142월 5123일 53412시 5832분 7345초")
     elif message.content == (f'{prefix}오클아 영어'):
         await message.channel.send("FXCK YOU BXXCH")
+    elif message.content == (f'{prefix}오클아 지금기분'):
+        await message.channel.send("SEX ON THE BEACH")
+    elif message.content == (f'{prefix}오클아 잼민이'):
+        await message.channel.send("씨빨쌔끼")
     elif message.content == (f'{prefix}오클아 서버정보'):
       gd = discord.Embed(colour=discord.Colour.purple(), title = "서버", description= "이 서버 정보임")
       gd.add_field(name="서버 이름", value=str(message.guild.name), inline=True)
@@ -82,6 +86,10 @@ async def on_message(message):
       gd.add_field(name="멤버수", value=str(message.guild.member_count), inline=True)
       gd.set_thumbnail(url=message.guild.icon_url)
       await message.channel.send(embed=gd)
+    elif message.content == (f'{prefix}오클아 마크서버주소'):
+        await message.channel.send("1.8.9 Onlyday.kro.kr 지금 바로 온리데이서버를 즐겨보세요!")
+    elif message.cintent == (f'{prefix}오클아 디코서버'):
+        await message.channel.send("https://discord.gg/nqqArAkGws")
     elif message.content == (f'{prefix}오클아 초대링크'): 
         await message.channel.send("https://discord.com/oauth2/authorize?client_id=801316073508438016&scope=bot 이 링크로 초대")
     elif message.content == (f'{prefix}오클아 도배'):
@@ -94,7 +102,7 @@ async def on_message(message):
         embed.add_field(name="개발자 디스코드", value="```Trol1#1230```", inline=True)
         embed.add_field(name="개발자 깃헙 오픈소스", value="https://github.com/KawaiTrol1/discordbot", inline=True)
         embed.add_field(name="도움을 준 사람", value="scy", inline=True)
-        embed.add_field(name="마지막 업데이트", value="```2021.1.23 (Beta 0.4.0)```", inline=True)
+        embed.add_field(name="마지막 업데이트", value="```2021.2.26 (Beta 1.0.0)```", inline=True)
         await message.channel.send(embed=embed)
 
 client.run(os.environ['token'])
