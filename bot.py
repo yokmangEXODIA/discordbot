@@ -30,11 +30,11 @@ async def on_message(message):
         await message.channel.send("ㅙ")
     elif message.content == (f'{prefix}오클아 안녕'):
         await message.channel.send("안녕 못함")
-    elif message.content == (f'{prefix}오클아 나 귀엽지?'):
+    elif message.content == (f'{prefix}오클아 나 귀엽지'):
         await message.channel.send("너 개같이 생겼어~^^")
-    elif message.content == (f'{prefix}오클아 나 섹시하지?'):
+    elif message.content == (f'{prefix}오클아 나 섹시하지'):
         await message.channel.send("이자슥 딱대 넌 손절이다")
-    elif message.content == (f'{prefix}오클아 오클 귀엽지?'):
+    elif message.content == (f'{prefix}오클아 오클 귀엽지'):
         await message.channel.send("진짜 우주 최강 귀요미다")
     elif message.content == (f'{prefix}오클아 사랑해줘'):
         await message.channel.send("특별히 내가 사랑해줄께")
@@ -52,9 +52,9 @@ async def on_message(message):
         await message.channel.send("물도있음")
     elif message.content == (f'{prefix}오클아 인공지능'):
         await message.channel.send("나는 인공지능 삐리비리삑!")
-    elif message.content == (f'{prefix}오클아 누가 천재임?'):
+    elif message.content == (f'{prefix}오클아 누가 천재임'):
         await message.channel.send("일단 적어도 넌 아님")
-    elif message.content == (f'{prefix}오클아 현타는?'):
+    elif message.content == (f'{prefix}오클아 현타는'):
         Hyunta = discord.Embed(colour=discord.Colour.red(), title="현타", description="싸이코임 무서워")
         Hyunta.set_image(url="https://cdn.discordapp.com/attachments/801469560921260045/801481891521364058/image0.png")
         Hyunta.set_thumbnail(url="https://cdn.discordapp.com/attachments/801469560921260045/801634321194025011/image0.png")
@@ -73,7 +73,7 @@ async def on_message(message):
     elif message.content == (f'{prefix}오클아 영어'):
         await message.channel.send("FXCK YOU BXXCH")
     elif message.content == (f'{prefix}오클아 지금기분'):
-        await message.channel.send("SEX ON THE BEACH")
+        await message.channel.send("좆까")
     elif message.content == (f'{prefix}오클아 잼민이'):
         await message.channel.send("씨빨쌔끼")
     elif message.content == (f'{prefix}오클아 서버정보'):
@@ -87,9 +87,13 @@ async def on_message(message):
       gd.set_thumbnail(url=message.guild.icon_url)
       await message.channel.send(embed=gd)
     elif message.content == (f'{prefix}오클아 마크서버'):
-        mcsv = disocrd.Embed(colour=discord.Colour.dark_magenta(), title= "서버주소", description= "디코도 있")
+        mcsv = discord.Embed(colour=discord.Colour.dark_magenta(), title= "서버주소", description= "디코도 있")
         mcsv.add_field(name="서버주소 : Onlyday.kro.kr 버전 : 1.8.9", value="https://discord.gg/nqqArAkGws", inline=False)
         await message.channel.send(embed=mcsv)
+    elif message.content == (f'{prefix}오클아 만보는'):
+        await message.channel.send("마우스 뿌서먹은넘")
+    elif message.content == (f'{prefix}오클아 방송부'):
+        await message.channel.send("괜히함 Tlqkf")
     elif message.content == (f'{prefix}오클아 초대링크'): 
         await message.channel.send("https://discord.com/oauth2/authorize?client_id=801316073508438016&scope=bot 이 링크로 초대")
     elif message.content == (f'{prefix}오클아 도배'):
